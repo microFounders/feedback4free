@@ -1,0 +1,52 @@
+{
+    "name": "react-feedback-component",
+    "version": "0.1.0",
+    "description": "A reusable React component for collecting user feedback.",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "start": "vite",
+        "build": "vite build",
+        "test": "jest",
+        "lint": "eslint .",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint"
+    },
+    "keywords": [
+        "react",
+        "feedback",
+        "component"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "homepage": "https://github.com/your-repo/react-feedback-component#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-repo/react-feedback-component.git"
+    },
+    "bugs": {
+        "url": "https://github.com/your-repo/react-feedback-component/issues"
+    },
+    "devDependencies": {
+        "vite": "^4.0.0",
+        "typescript": "^5.0.0",
+        "eslint": "^8.0.0",
+        "prettier": "^3.0.0",
+        "jest": "^29.0.0",
+        "@testing-library/react": "^14.0.0",
+        "@storybook/react": "^7.0.0"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    }
+}
