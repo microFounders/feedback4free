@@ -1,27 +1,37 @@
 import React from "react";
+import FeedbackButton from "./components/FeedbackButton";
+import { Toaster } from "./components/ui/toaster";
 
-interface FeedbackComponentProps {
-  onSubmit: (feedback: string) => void;
-}
-
-const FeedbackComponent: React.FC<FeedbackComponentProps> = ({ onSubmit }) => {
-  const [feedback, setFeedback] = React.useState("");
-
-  const handleSubmit = () => {
-    onSubmit(feedback);
-    setFeedback("");
-  };
-
+// Export the main component
+export const FeedbackComponent: React.FC<{
+  slackWebhookUrl: string;
+  position?: "bottom-right" | "bottom-left" | "top-right" | "top-left";
+  color?:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "ghost"
+    | "link";
+  icon?: "message" | "help" | "flag" | "alert" | "info";
+  animate?: boolean;
+}> = ({ slackWebhookUrl, position, color, icon, animate }) => {
   return (
-    <div>
-      <textarea
-        value={feedback}
-        onChange={(e) => setFeedback(e.target.value)}
-        placeholder="Enter your feedback"
+    <>
+      <Toaster />
+      <FeedbackButton
+        slackWebhookUrl={slackWebhookUrl}
+        position={position}
+        color={color}
+        icon={icon}
+        animate={animate}
       />
-      <button onClick={handleSubmit}>Submit</button>
-    </div>
+    </>
   );
 };
 
+// Export individual components for more flexibility
+export { default as FeedbackButton } from "./components/FeedbackButton";
+
+// Default export for easier importing
 export default FeedbackComponent;

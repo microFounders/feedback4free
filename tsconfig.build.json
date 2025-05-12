@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "isolatedModules": false,
+    "allowImportingTsExtensions": false
+  },
+  "include": [
+    "src/FeedbackComponent.tsx",
+    "src/components/**/*",
+    "src/types/**/*",
+    "src/services/**/*",
+    "src/utils/**/*",
+    "src/hooks/**/*",
+    "src/lib/**/*"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
+}
