@@ -6,7 +6,7 @@ Thank you for considering contributing to this project! Contributions are welcom
 
 ### Reporting Issues
 
-1. Check the [issue tracker](https://github.com/your-repo/issues) to see if the issue has already been reported.
+1. Check the [issue tracker](https://github.com/microFounders/issues) to see if the issue has already been reported.
 2. If not, create a new issue with the following details:
    - A clear and descriptive title.
    - Steps to reproduce the issue.

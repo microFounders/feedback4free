@@ -35,7 +35,7 @@ The React Feedback Component is a customizable feedback button and form for Reac
 ### Basic Example
 
 ```tsx
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
 
 function App() {
   return (
@@ -69,4 +69,4 @@ For more detailed information about each prop and how to use them, see the [Inst
 
 ## Need Help?
 
-If you encounter any issues or have questions, please open an issue on our [GitHub repository](https://github.com/your-repo/react-feedback-component/issues).
+If you encounter any issues or have questions, please open an issue on our [GitHub repository](https://github.com/microFounders/free-feedback/issues).

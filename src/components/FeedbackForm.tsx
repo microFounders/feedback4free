@@ -119,7 +119,13 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({
     <div
       className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
       onClick={handleBackdropClick}
-      style={{ width: "100vw", height: "100vh" }}
+      style={{
+        position: "fixed",
+        width: "100vw",
+        height: "100vh",
+        left: 0,
+        top: 0,
+      }}
     >
       <Card className="w-full max-w-md relative overflow-hidden animate-scale-in shadow-xl">
         <Button

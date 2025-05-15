@@ -5,9 +5,9 @@ Get up and running with the React Feedback Component in minutes.
 ## Installation
 
 ```bash
-npm install react-feedback-component
+npm install free-feedback
 # or
-yarn add react-feedback-component
+yarn add free-feedback
 ```
 
 ## Basic Setup
@@ -15,7 +15,7 @@ yarn add react-feedback-component
 Add the component to your React application:
 
 ```tsx
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
 
 function App() {
   return (
@@ -97,4 +97,4 @@ For more detailed information, check out:
 
 ## Need Help?
 
-If you encounter any issues or have questions, please open an issue on our [GitHub repository](https://github.com/your-repo/react-feedback-component/issues).
+If you encounter any issues or have questions, please open an issue on our [GitHub repository](https://github.com/microFounders/free-feedback/issues).

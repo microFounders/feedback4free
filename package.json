@@ -6,6 +6,7 @@
     "main": "dist/free-feedback.umd.js",
     "module": "dist/free-feedback.es.js",
     "types": "dist/types/FeedbackComponent.d.ts",
+    "style": "dist/index.css",
     "scripts": {
         "start": "vite",
         "build": "vite build && tsc -p tsconfig.build.json",
@@ -66,6 +67,7 @@
         "next-themes": "^0.4.6",
         "react": "^19.1.0",
         "react-hook-form": "^7.56.3",
-        "tailwind-merge": "^3.3.0"
+        "tailwind-merge": "^3.3.0",
+        "tailwindcss-animate": "^1.0.7"
     }
 }

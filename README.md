@@ -5,9 +5,18 @@ A reusable React component for collecting user feedback and sending it to Slack 
 ## Installation
 
 ```bash
-npm install react-feedback-component
+npm install free-feedback
 # or
-yarn add react-feedback-component
+yarn add free-feedback
+```
+
+## CSS Import
+
+The component requires its CSS to be imported for proper styling. Make sure to import it in your application:
+
+```jsx
+// Import the CSS in your entry file (e.g., index.js, App.js)
+import "free-feedback/dist/index.css";
 ```
 
 ## Usage
@@ -15,7 +24,8 @@ yarn add react-feedback-component
 ### Basic Usage with Slack
 
 ```tsx
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
+import "free-feedback/dist/index.css"; // Import the CSS
 
 function App() {
   return (
@@ -27,7 +37,7 @@ function App() {
 ### Advanced Usage with Custom Styling
 
 ```tsx
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
 
 function App() {
   return (
@@ -49,7 +59,7 @@ function App() {
 ### Using with a Custom Webhook
 
 ```tsx
-import { FeedbackButton } from "react-feedback-component";
+import { FeedbackButton } from "free-feedback";
 
 function App() {
   return (
@@ -67,7 +77,7 @@ function App() {
 ### Pre-filling User Email
 
 ```tsx
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
 
 function App() {
   // Get user email from your auth system
@@ -112,9 +122,9 @@ The React Feedback Component consists of several parts:
 You can also import and use the `FeedbackButton` component directly if you want more control:
 
 ```tsx
-import { FeedbackButton } from "react-feedback-component";
-import { ThemeProvider } from "react-feedback-component/ThemeProvider";
-import { Toaster } from "react-feedback-component/ui/toaster";
+import { FeedbackButton } from "free-feedback";
+import { ThemeProvider } from "free-feedback/ThemeProvider";
+import { Toaster } from "free-feedback/ui/toaster";
 
 function App() {
   return (
@@ -166,7 +176,7 @@ When using `integrationType="webhook"`, the component will:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/react-feedback-component.git
+   git clone https://github.com/microFounders/free-feedback.git
    ```
 2. Install dependencies:
    ```bash
