@@ -1,6 +1,6 @@
 {
     "name": "react-feedback-component",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "A reusable React component for collecting user feedback.",
     "type": "module",
     "main": "dist/react-feedback-component.umd.js",
