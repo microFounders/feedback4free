@@ -29,13 +29,13 @@
     "publishConfig": {
         "access": "public"
     },
-    "homepage": "https://github.com/your-repo/react-feedback-component#readme",
+    "homepage": "https://github.com/microFounders/react-feedback-component#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/your-repo/react-feedback-component.git"
+        "url": "https://github.com/microFounders/react-feedback-component.git"
     },
     "bugs": {
-        "url": "https://github.com/your-repo/react-feedback-component/issues"
+        "url": "https://github.com/microFounders/react-feedback-component/issues"
     },
     "devDependencies": {
         "@eslint/js": "^9.9.0",
