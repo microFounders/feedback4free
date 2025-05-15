@@ -33,7 +33,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [screenshot, setScreenshot] = useState<File | null>(null);
 
-  const { register, handleSubmit, watch, formState, reset, setValue } =
+  const { register, handleSubmit, watch, formState, reset } =
     useForm<FeedbackFormData>({
       defaultValues: {
         type: "issue",

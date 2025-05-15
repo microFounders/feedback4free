@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import React, { useState } from "react";
 import ButtonContent from "./feedback-button/ButtonContent";
 import { FeedbackButtonProps } from "./feedback-button/FeedbackButtonProps";
-import { getPositionClasses } from "./feedback-button/PositionClasses";
 import FeedbackForm from "./FeedbackForm";
 
 function getPositionStyles(
@@ -34,12 +32,10 @@ const FeedbackButton: React.FC<FeedbackButtonProps> = ({
   integrationType = "slack",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
 
   // Use the passed userEmail if provided, otherwise use the email from auth state
   const effectiveEmail = userEmail || "";
 
-  const positionClass = getPositionClasses(position);
   const animationClass = animate ? "animate-pulse-slow" : "";
   const roundedClass = rounded === "full" ? "rounded-full" : "rounded-md";
 
