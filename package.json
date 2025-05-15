@@ -1,10 +1,10 @@
 {
-    "name": "react-feedback-component",
+    "name": "free-feedback",
     "version": "1.0.0",
     "description": "A reusable React component for collecting user feedback.",
     "type": "module",
-    "main": "dist/react-feedback-component.umd.js",
-    "module": "dist/react-feedback-component.es.js",
+    "main": "dist/free-feedback.umd.js",
+    "module": "dist/free-feedback.es.js",
     "types": "dist/types/FeedbackComponent.d.ts",
     "scripts": {
         "start": "vite",
@@ -29,13 +29,13 @@
     "publishConfig": {
         "access": "public"
     },
-    "homepage": "https://github.com/microFounders/react-feedback-component#readme",
+    "homepage": "https://github.com/microFounders/free-feedback#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/microFounders/react-feedback-component.git"
+        "url": "https://github.com/microFounders/free-feedback.git"
     },
     "bugs": {
-        "url": "https://github.com/microFounders/react-feedback-component/issues"
+        "url": "https://github.com/microFounders/free-feedback/issues"
     },
     "devDependencies": {
         "@eslint/js": "^9.9.0",
