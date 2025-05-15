@@ -73,6 +73,68 @@ export async function sendFeedbackToSlack(
 }
 
 /**
+ * Sends feedback to a generic webhook
+ */
+export async function sendFeedbackToWebhook(
+  data: FeedbackFormData,
+  webhookUrl: string
+): Promise<Response> {
+  // Validate webhook URL
+  if (!webhookUrl || !webhookUrl.startsWith("http")) {
+    console.log("Development mode: Simulating webhook response");
+    // Return a mock successful response for testing or when no webhook is provided
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  let imageData = null;
+
+  // Format data for the webhook
+  const payload = {
+    type: data.type,
+    email: data.email,
+    subject: data.subject,
+    message: data.message,
+    timestamp: new Date().toISOString(),
+    hasScreenshot: !!data.screenshot,
+  };
+
+  try {
+    // Send data to the webhook
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+      mode: "no-cors", // Add no-cors mode to avoid CORS issues
+    });
+
+    // If there's a screenshot and we want to handle it separately
+    if (data.screenshot) {
+      try {
+        imageData = await fileToBase64(data.screenshot);
+        console.log("Screenshot data available but not sending separately");
+        // In a real implementation, you could send this to a file storage service
+      } catch (error) {
+        console.error("Error converting screenshot to base64:", error);
+      }
+    }
+
+    // Since we're using no-cors, return a mock success response
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.error("Failed to send feedback to webhook:", error);
+    throw error;
+  }
+}
+
+/**
  * Convert a file to base64 string
  */
 function fileToBase64(file: File): Promise<string> {

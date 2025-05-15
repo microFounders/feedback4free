@@ -1,5 +1,6 @@
 import React from "react";
 import FeedbackButton from "./components/FeedbackButton";
+import { ThemeProvider } from "./components/ThemeProvider";
 import { Toaster } from "./components/ui/toaster";
 
 // Export the main component
@@ -17,7 +18,7 @@ export const FeedbackComponent: React.FC<{
   animate?: boolean;
 }> = ({ slackWebhookUrl, position, color, icon, animate }) => {
   return (
-    <>
+    <ThemeProvider defaultTheme="system">
       <Toaster />
       <FeedbackButton
         slackWebhookUrl={slackWebhookUrl}
@@ -26,7 +27,7 @@ export const FeedbackComponent: React.FC<{
         icon={icon}
         animate={animate}
       />
-    </>
+    </ThemeProvider>
   );
 };
 
