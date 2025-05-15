@@ -6,6 +6,19 @@ import { FeedbackButtonProps } from "./feedback-button/FeedbackButtonProps";
 import { getPositionClasses } from "./feedback-button/PositionClasses";
 import FeedbackForm from "./FeedbackForm";
 
+function getPositionStyles(
+  position: "bottom-right" | "bottom-left" | "top-right" | "top-left"
+): React.CSSProperties {
+  const positions: Record<typeof position, React.CSSProperties> = {
+    "bottom-right": { bottom: "1.5rem", right: "1.5rem" },
+    "bottom-left": { bottom: "1.5rem", left: "1.5rem" },
+    "top-right": { top: "1.5rem", right: "1.5rem" },
+    "top-left": { top: "1.5rem", left: "1.5rem" },
+  };
+
+  return positions[position];
+}
+
 const FeedbackButton: React.FC<FeedbackButtonProps> = ({
   slackWebhookUrl = "",
   webhookUrl = "",
@@ -32,17 +45,25 @@ const FeedbackButton: React.FC<FeedbackButtonProps> = ({
 
   return (
     <>
-      <Button
-        onClick={() => setIsOpen(true)}
-        className={`fixed z-50 ${positionClass} ${roundedClass} shadow-lg hover:shadow-xl transition-all duration-300 ${animationClass} ${
-          showLabel ? "px-4" : "p-3"
-        }`}
-        variant={color}
-        size={showLabel ? size : "icon"}
-        aria-label={label}
+      <div
+        className="fixed z-[9999] min-w-max"
+        style={{
+          position: "fixed",
+          ...getPositionStyles(position),
+        }}
       >
-        <ButtonContent icon={icon} label={label} showLabel={showLabel} />
-      </Button>
+        <Button
+          onClick={() => setIsOpen(true)}
+          className={`${roundedClass} shadow-lg hover:shadow-xl transition-all duration-300 ${animationClass} ${
+            showLabel ? "px-4" : "p-3"
+          }`}
+          variant={color}
+          size={showLabel ? size : "icon"}
+          aria-label={label}
+        >
+          <ButtonContent icon={icon} label={label} showLabel={showLabel} />
+        </Button>
+      </div>
 
       {isOpen && (
         <FeedbackForm

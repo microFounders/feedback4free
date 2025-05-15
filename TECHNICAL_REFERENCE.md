@@ -246,8 +246,8 @@ The package is published to npm with the following structure:
 
 ```
 dist/
-├── react-feedback-component.es.js    # ES module
-├── react-feedback-component.umd.js   # UMD module
+├── free-feedback.es.js    # ES module
+├── free-feedback.umd.js   # UMD module
 └── types/                            # TypeScript type definitions
     └── FeedbackComponent.d.ts
 ```

@@ -22,10 +22,10 @@ You can install the React Feedback Component using npm or yarn:
 
 ```bash
 # Using npm
-npm install react-feedback-component
+npm install free-feedback
 
 # Using yarn
-yarn add react-feedback-component
+yarn add free-feedback
 ```
 
 ## Basic Setup
@@ -34,7 +34,7 @@ After installation, you can import and use the component in your React applicati
 
 ```tsx
 import React from "react";
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
 
 function App() {
   return (
@@ -184,7 +184,7 @@ The `icon` prop changes the icon displayed on the button:
 If you have user information available (e.g., from authentication), you can pre-fill the email field:
 
 ```tsx
-import { FeedbackComponent } from "react-feedback-component";
+import { FeedbackComponent } from "free-feedback";
 import { useAuth } from "./your-auth-provider";
 
 function App() {
@@ -204,9 +204,9 @@ function App() {
 For more control, you can use the individual components:
 
 ```tsx
-import { FeedbackButton } from "react-feedback-component";
-import { ThemeProvider } from "react-feedback-component/ThemeProvider";
-import { Toaster } from "react-feedback-component/ui/toaster";
+import { FeedbackButton } from "free-feedback";
+import { ThemeProvider } from "free-feedback/ThemeProvider";
+import { Toaster } from "free-feedback/ui/toaster";
 
 function App() {
   return (

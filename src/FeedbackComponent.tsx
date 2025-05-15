@@ -2,6 +2,7 @@ import React from "react";
 import FeedbackButton from "./components/FeedbackButton";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Toaster } from "./components/ui/toaster";
+import "./index.css";
 
 // Export the main component
 export const FeedbackComponent: React.FC<{

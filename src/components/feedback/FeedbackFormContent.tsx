@@ -54,7 +54,7 @@ const FeedbackFormContent: React.FC<FeedbackFormContentProps> = ({
   ];
 
   return (
-    <form className="space-y-4">
+    <div className="space-y-4">
       <FeedbackTypeSelector
         currentType={currentType}
         register={register}
@@ -102,7 +102,7 @@ const FeedbackFormContent: React.FC<FeedbackFormContentProps> = ({
       />
 
       <SubmitButton isSubmitting={isSubmitting} />
-    </form>
+    </div>
   );
 };
 
