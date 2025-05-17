@@ -27,7 +27,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/FeedbackComponent.tsx"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "ReactFeedbackComponent",
       fileName: (format) => `free-feedback.${format}.js`,
     },

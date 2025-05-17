@@ -10,6 +10,7 @@
     "allowImportingTsExtensions": false
   },
   "include": [
+    "src/index.ts",
     "src/FeedbackComponent.tsx",
     "src/components/**/*",
     "src/types/**/*",

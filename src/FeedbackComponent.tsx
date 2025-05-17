@@ -6,7 +6,8 @@ import "./index.css";
 
 // Export the main component
 export const FeedbackComponent: React.FC<{
-  slackWebhookUrl: string;
+  slackWebhookUrl?: string;
+  webhookUrl?: string;
   position?: "bottom-right" | "bottom-left" | "top-right" | "top-left";
   color?:
     | "default"
@@ -17,16 +18,42 @@ export const FeedbackComponent: React.FC<{
     | "link";
   icon?: "message" | "help" | "flag" | "alert" | "info";
   animate?: boolean;
-}> = ({ slackWebhookUrl, position, color, icon, animate }) => {
+  size?: "sm" | "default" | "lg";
+  label?: string;
+  showLabel?: boolean;
+  rounded?: "full" | "md";
+  userEmail?: string;
+  integrationType?: "slack" | "webhook";
+}> = ({
+  slackWebhookUrl,
+  webhookUrl,
+  position,
+  color,
+  icon,
+  animate,
+  size,
+  label,
+  showLabel,
+  rounded,
+  userEmail,
+  integrationType,
+}) => {
   return (
     <ThemeProvider defaultTheme="system">
       <Toaster />
       <FeedbackButton
         slackWebhookUrl={slackWebhookUrl}
+        webhookUrl={webhookUrl}
         position={position}
         color={color}
         icon={icon}
         animate={animate}
+        size={size}
+        label={label}
+        showLabel={showLabel}
+        rounded={rounded}
+        userEmail={userEmail}
+        integrationType={integrationType}
       />
     </ThemeProvider>
   );

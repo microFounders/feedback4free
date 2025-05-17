@@ -5,7 +5,7 @@
     "type": "module",
     "main": "dist/free-feedback.umd.js",
     "module": "dist/free-feedback.es.js",
-    "types": "dist/types/FeedbackComponent.d.ts",
+    "types": "dist/types/index.d.ts",
     "style": "dist/index.css",
     "scripts": {
         "start": "vite",
