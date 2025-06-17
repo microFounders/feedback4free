@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  .f4f-feedback-component {
     --background: 0 0% 100%;
     --foreground: 210 20% 10%;
 
@@ -44,7 +44,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
+  .f4f-feedback-component.dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -84,57 +84,57 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  .f4f-feedback-component * {
+    @apply f4f-border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  .f4f-feedback-component {
+    @apply f4f-bg-background f4f-text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   /* Custom scrollbar styles */
-  ::-webkit-scrollbar {
+  .f4f-feedback-component ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
-  ::-webkit-scrollbar-track {
+  .f4f-feedback-component ::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  ::-webkit-scrollbar-thumb {
+  .f4f-feedback-component ::-webkit-scrollbar-thumb {
     background: hsl(var(--muted-foreground) / 0.3);
     border-radius: 4px;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
+  .f4f-feedback-component ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--muted-foreground) / 0.5);
   }
 
   /* Focus styles */
-  *:focus-visible {
+  .f4f-feedback-component *:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
 
   /* Custom transitions */
-  .transition-all {
+  .f4f-feedback-component .f4f-transition-all {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     transition-duration: 0.2s;
   }
 
   /* Glass morphism */
-  .glass {
+  .f4f-feedback-component .f4f-glass {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
-  .glass-dark {
+  .f4f-feedback-component .f4f-glass-dark {
     background: rgba(17, 25, 40, 0.75);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);

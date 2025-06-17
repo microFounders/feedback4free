@@ -36,13 +36,12 @@ const FeedbackButton: React.FC<FeedbackButtonProps> = ({
   // Use the passed userEmail if provided, otherwise use the email from auth state
   const effectiveEmail = userEmail || "";
 
-  const animationClass = animate ? "animate-pulse-slow" : "";
-  const roundedClass = rounded === "full" ? "rounded-full" : "rounded-md";
+  const animationClass = animate ? "f4f-animate-pulse-slow" : "";
 
   return (
     <>
       <div
-        className="fixed z-[9999] min-w-max"
+        className="f4f-fixed f4f-z-[9999] f4f-min-w-max"
         style={{
           position: "fixed",
           ...getPositionStyles(position),
@@ -50,11 +49,12 @@ const FeedbackButton: React.FC<FeedbackButtonProps> = ({
       >
         <Button
           onClick={() => setIsOpen(true)}
-          className={`${roundedClass} shadow-lg hover:shadow-xl transition-all duration-300 ${animationClass} ${
-            showLabel ? "px-4" : "p-3"
+          className={`f4f-shadow-lg hover:f4f-shadow-xl f4f-transition-all f4f-duration-300 ${animationClass} ${
+            showLabel ? "f4f-px-4" : "f4f-p-3"
           }`}
           variant={color}
           size={showLabel ? size : "icon"}
+          rounded={rounded}
           aria-label={label}
         >
           <ButtonContent icon={icon} label={label} showLabel={showLabel} />

@@ -117,7 +117,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({
 
   return (
     <div
-      className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
+      className="f4f-fixed f4f-inset-0 f4f-bg-black/30 f4f-backdrop-blur-sm f4f-z-50 f4f-flex f4f-items-center f4f-justify-center f4f-p-4 f4f-animate-fade-in"
       onClick={handleBackdropClick}
       style={{
         position: "fixed",
@@ -127,20 +127,22 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({
         top: 0,
       }}
     >
-      <Card className="w-full max-w-md relative overflow-hidden animate-scale-in shadow-xl">
+      <Card className="f4f-w-full f4f-max-w-md f4f-relative f4f-overflow-hidden f4f-animate-scale-in f4f-shadow-xl">
         <Button
           variant="ghost"
           size="icon"
-          className="absolute right-2 top-2 h-6 w-6 z-10"
+          className="f4f-absolute f4f-right-2 f4f-top-2 f4f-h-6 f4f-w-6 f4f-z-10"
           onClick={onClose}
           aria-label="Close"
         >
-          <X className="h-3 w-3" />
+          <X className="f4f-h-3 f4f-w-3" />
         </Button>
-        <ScrollArea className="h-[85vh] max-h-[600px]">
-          <div className="p-6">
-            <h2 className="text-xl font-medium mb-2">Send Feedback</h2>
-            <p className="text-muted-foreground text-sm mb-4">
+        <ScrollArea className="f4f-h-[85vh] f4f-max-h-[600px]">
+          <div className="f4f-p-6">
+            <h2 className="f4f-text-xl f4f-font-medium f4f-mb-2">
+              Send Feedback
+            </h2>
+            <p className="f4f-text-muted-foreground f4f-text-sm f4f-mb-4">
               We'd love to hear from you
             </p>
 

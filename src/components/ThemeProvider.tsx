@@ -26,22 +26,20 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [currentTheme, setCurrentTheme] = useState<"dark" | "light">("light");
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
-
     if (theme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
         : "light";
 
-      root.classList.add(systemTheme);
+      setCurrentTheme(systemTheme);
       return;
     }
 
-    root.classList.add(theme);
+    setCurrentTheme(theme);
   }, [theme]);
 
   const value = {
@@ -53,7 +51,7 @@ export function ThemeProvider({
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
-      {children}
+      <div className={`f4f-feedback-component ${currentTheme}`}>{children}</div>
     </ThemeProviderContext.Provider>
   );
 }

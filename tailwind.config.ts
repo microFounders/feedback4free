@@ -9,7 +9,7 @@ export default {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  prefix: "",
+  prefix: "f4f-",
   theme: {
     container: {
       center: true,
