@@ -14,8 +14,8 @@ const ButtonContent: React.FC<ButtonContentProps> = ({
 }) => {
   return (
     <>
-      <IconSelector icon={icon} className="h-5 w-5" />
-      {showLabel && <span className="ml-2">{label}</span>}
+      <IconSelector icon={icon} className="f4f-h-5 f4f-w-5" />
+      {showLabel && <span className="f4f-ml-2">{label}</span>}
     </>
   );
 };

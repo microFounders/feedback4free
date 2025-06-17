@@ -24,6 +24,7 @@ export const FeedbackComponent: React.FC<{
   rounded?: "full" | "md";
   userEmail?: string;
   integrationType?: "slack" | "webhook";
+  className?: string;
 }> = ({
   slackWebhookUrl,
   webhookUrl,
@@ -37,6 +38,7 @@ export const FeedbackComponent: React.FC<{
   rounded,
   userEmail,
   integrationType,
+  className,
 }) => {
   return (
     <ThemeProvider defaultTheme="system">

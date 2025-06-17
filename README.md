@@ -19,6 +19,16 @@ The component requires its CSS to be imported for proper styling. Make sure to i
 import "free-feedback/dist/index.css";
 ```
 
+## Style Isolation
+
+This component uses CSS isolation techniques to prevent style conflicts with your application:
+
+1. All Tailwind CSS classes are prefixed with `f4f-` to avoid collisions with your application's Tailwind classes
+2. CSS variables and styles are scoped to the component's container
+3. The component uses its own theme provider that doesn't affect your application's styling
+
+This ensures that the component will work correctly in any Tailwind application without style conflicts.
+
 ## Usage
 
 ### Basic Usage with Slack
